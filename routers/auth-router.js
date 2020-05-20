@@ -8,7 +8,7 @@ const {isValid} = require('../models/user-services');
 router.post('/register', (req, res) => {
     const credentials = req.body;
 
-    if(isValid(creds)){
+    if(isValid(credentials)){
         const ROUNDS = process.env.BCRYPT_ROUNDS || 8;
         const hash = bcrypt.hashSync(credentials.password, ROUNDS);
 

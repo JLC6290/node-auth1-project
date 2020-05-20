@@ -25,7 +25,7 @@ server.get('/', (req, res) => {
     res.status(200).send("server running")
 })
 
-server.use('/routers/user-router', userRouter)
-server.use('/routers/auth-router', authRouter)
+server.use('/api/user', userRouter)
+server.use('/api/auth', authRouter)
 
-module.exports = server
+module.exports = server;
